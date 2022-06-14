@@ -21,7 +21,8 @@ describe("replace", () => {
     `;
 
     const result = replaceImportAddresses(code, {
-      Basic, Advanced
+      Basic,
+      Advanced,
     });
 
     const reference = `
@@ -52,7 +53,8 @@ describe("replace", () => {
     `;
 
     const result = replaceImportAddresses(code, {
-      Basic, Advanced
+      Basic,
+      Advanced,
     });
 
     const reference = `

@@ -77,8 +77,8 @@ describe("jest methods", () => {
               panic("not on my watch!")
             }
           }
-        `
-      })
+        `,
+      }),
     );
   });
 
@@ -89,8 +89,8 @@ describe("jest methods", () => {
           pub fun main(): Int{
             return 42
           }
-        `
-      })
+        `,
+      }),
     );
     expect(result).toBe(42);
     expect(err).toBe(null);
@@ -103,8 +103,8 @@ describe("jest methods", () => {
           transaction{
             prepare(signer: AuthAccount){}
           }
-        `
-      })
+        `,
+      }),
     );
   });
 
@@ -115,8 +115,8 @@ describe("jest methods", () => {
           pub fun main(){
             panic("exit here")
           }
-        `
-      })
+        `,
+      }),
     );
   });
 });

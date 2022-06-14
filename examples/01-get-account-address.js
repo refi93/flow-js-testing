@@ -1,4 +1,4 @@
-import path from "path"
+import path from "path";
 import { init, emulator, getAccountAddress } from "../src";
 
 (async () => {

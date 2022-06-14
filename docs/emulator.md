@@ -100,7 +100,7 @@ describe("test setup", () => {
     // Turn on logging from begining
     emulator.setLogging(true);
     // some asserts and interactions
-    
+
     // Turn off logging for later calls
     emulator.setLogging(false);
     // more asserts and interactions here

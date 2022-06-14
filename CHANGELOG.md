@@ -1,7 +1,9 @@
 ### 0.2.0
 
 #### **BREAKING CHANGES**
+
 - `sendTransaction` and `executeScript` functions now return a tuple of [result, error]. As do the following functions:
+
   - updateContract
   - setBlockOffset
   - scratch
@@ -21,7 +23,6 @@
   - checkManager
   - getBlockOffset
   - getFlowBalance
-
 
 Any code that relies upon checking the result of any of these functions and expects only the result returned will need to be refactored.
 Jest asserts were updated accordingly, but if you were writing your own you will need to update them.
@@ -46,4 +47,3 @@ For examples of new usage see the [script](/docs/exeute-scripts.md), [transactio
 - Bootstrap utility added to framework
 - Update `flow-cadut` dependency and fixed support for complex types
 - Fixed issue with emulator throwing an error with `logging` flag set to `true`
-

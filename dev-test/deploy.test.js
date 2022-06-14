@@ -6,7 +6,7 @@ import {
   deployContractByName,
   getContractAddress,
   getAccountAddress,
-  getServiceAddress
+  getServiceAddress,
 } from "../src";
 
 // We need to set timeout for a higher number, cause some transactions might take up some time
@@ -29,7 +29,7 @@ describe("interactions - sendTransaction", () => {
   test("deploy basic contract - to service account", async () => {
     const name = "HelloWorld";
     await deployContractByName({ name });
-    const [ address ] = await getContractAddress(name);
+    const [address] = await getContractAddress(name);
     const serviceAccount = await getServiceAddress();
     expect(address).toBe(serviceAccount);
   });
@@ -37,7 +37,7 @@ describe("interactions - sendTransaction", () => {
   test("deploy basic contract - to service account, short notation", async () => {
     const name = "HelloWorld";
     await deployContractByName(name);
-    const [ address ] = await getContractAddress(name);
+    const [address] = await getContractAddress(name);
     const serviceAccount = await getServiceAddress();
     expect(address).toBe(serviceAccount);
   });
@@ -46,7 +46,7 @@ describe("interactions - sendTransaction", () => {
     const Alice = await getAccountAddress("Alice");
     const name = "HelloWorld";
     await deployContractByName({ name, to: Alice });
-    const [ address ] = await getContractAddress(name);
+    const [address] = await getContractAddress(name);
     expect(address).toBe(Alice);
   });
 
@@ -54,7 +54,7 @@ describe("interactions - sendTransaction", () => {
     const name = "HelloWorld";
     const Alice = await getAccountAddress("Alice");
     await deployContractByName(name, Alice);
-    const [ address ] = await getContractAddress(name);
+    const [address] = await getContractAddress(name);
     expect(address).toBe(Alice);
   });
 
@@ -68,9 +68,9 @@ describe("interactions - sendTransaction", () => {
         pub fun main():String{
           return HelloWorld.message
         }
-      `
-    })
-    expect(err).toBe(null)
-    expect(result).toBe("Hello, from Cadence")
+      `,
+    });
+    expect(err).toBe(null);
+    expect(result).toBe("Hello, from Cadence");
   });
 });

@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
   # run on published release. this will not trigger, when release draft is created
   release:
-    types: 
+    types:
       - published
 
 jobs:

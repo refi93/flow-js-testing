@@ -167,7 +167,7 @@ describe("interactions - executeScript", () => {
   });
 
   test("executeScript - shall pass with short notation", async () => {
-    const [result,err] = await shallResolve(executeScript("log-message"));
+    const [result, err] = await shallResolve(executeScript("log-message"));
     expect(err).toBe(null);
     expect(result).toBe(42);
   });
@@ -191,8 +191,8 @@ describe("interactions - executeScript", () => {
       }
     `;
       const args = [[]];
-      return  executeScript({ code, args });
-    })
+      return executeScript({ code, args });
+    });
     expect(err).toBe(null);
     expect(result.length).toBe(0);
   });

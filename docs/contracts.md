@@ -14,18 +14,18 @@ Deploys contract code located inside a Cadence file. Returns the transaction res
 
 Props object accepts the following fields:
 
-| Name         | Type                                                | Optional | Description                                                                                                                                     |
-| ------------ | --------------------------------------------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| `name`       | string                                              |          | name of the file in `contracts` folder (sans `.cdc` extension) and name of the contract (please note those should be the same)                  |
+| Name         | Type                                                          | Optional | Description                                                                                                                                     |
+| ------------ | ------------------------------------------------------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| `name`       | string                                                        |          | name of the file in `contracts` folder (sans `.cdc` extension) and name of the contract (please note those should be the same)                  |
 | `to`         | [Address](https://docs.onflow.org/fcl/reference/api/#address) | ✅       | (optional) account address, where contract will be deployed. If this is not specified, framework will create new account with randomized alias. |
-| `addressMap` | [AddressMap](api.md#addressmap)                      | ✅       | (optional) object to use for address mapping of existing deployed contracts                                                                     |
-| `args`       | [Any]                                               | ✅       | (optional) arguments, which will be passed to contract initializer. (optional) if template does not expect any arguments.                       |
-| `update`     | boolean                                             | ✅       | (optional) whether to update deployed contract. Default: `false`                                                                                |
+| `addressMap` | [AddressMap](api.md#addressmap)                               | ✅       | (optional) object to use for address mapping of existing deployed contracts                                                                     |
+| `args`       | [Any]                                                         | ✅       | (optional) arguments, which will be passed to contract initializer. (optional) if template does not expect any arguments.                       |
+| `update`     | boolean                                                       | ✅       | (optional) whether to update deployed contract. Default: `false`                                                                                |
 
 #### Returns
 
-| Type                                                              | Description                          |
-| ----------------------------------------------------------------- | ------------------------------------ |
+| Type                                                                        | Description                          |
+| --------------------------------------------------------------------------- | ------------------------------------ |
 | [ResponseObject](https://docs.onflow.org/fcl/reference/api/#responseobject) | Result of the deploying transaction. |
 
 Usage:
@@ -71,14 +71,14 @@ Deploys contract code specified as string. Returns transaction result.
 
 Props object accepts the following fields:
 
-| Name           | Type                                                | Optional | Description                                                                                                                          |
-| -------------- | --------------------------------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| `contractCode` | string                                              |          | string representation of contract                                                                                                    |
-| `name`         | string                                              |          | name of the contract to be deployed. Should be the same as the name of the contract provided in `contractCode`                       |
+| Name           | Type                                                          | Optional | Description                                                                                                                          |
+| -------------- | ------------------------------------------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `contractCode` | string                                                        |          | string representation of contract                                                                                                    |
+| `name`         | string                                                        |          | name of the contract to be deployed. Should be the same as the name of the contract provided in `contractCode`                       |
 | `to`           | [Address](https://docs.onflow.org/fcl/reference/api/#address) | ✅       | account address, where contract will be deployed. If this is not specified, framework will create new account with randomized alias. |
-| `addressMap`   | [AddressMap](api.md#addressmap)                                               | ✅       | object to use for import resolver. Default: `{}`                                                                                     |
-| `args`         | [Any]                                               | ✅       | arguments, which will be passed to contract initializer. Default: `[]`                                                               |
-| `update`       | boolean                                             | ✅       | whether to update deployed contract. Default: `false`                                                                                |
+| `addressMap`   | [AddressMap](api.md#addressmap)                               | ✅       | object to use for import resolver. Default: `{}`                                                                                     |
+| `args`         | [Any]                                                         | ✅       | arguments, which will be passed to contract initializer. Default: `[]`                                                               |
+| `update`       | boolean                                                       | ✅       | whether to update deployed contract. Default: `false`                                                                                |
 
 Usage:
 
@@ -112,7 +112,7 @@ const main = async () => {
     args,
   });
 
-  console.log( deploymentResult, error );
+  console.log(deploymentResult, error);
 
   await emulator.stop();
 };

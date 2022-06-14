@@ -13,27 +13,21 @@ Ensure transaction did not throw and was sealed.
 
 #### Arguments
 
-| Name | Type                        | Description                                          |
-| ---- | --------------------------- | ---------------------------------------------------- |
-| `ix` | [Interaction](api.md#interaction)  | interaction, either in form of a Promise or function |
+| Name | Type                              | Description                                          |
+| ---- | --------------------------------- | ---------------------------------------------------- |
+| `ix` | [Interaction](api.md#interaction) | interaction, either in form of a Promise or function |
 
 #### Returns
 
-| Type                                    | Description        |
-| --------------------------------------- | ------------------ |
+| Type                                                                        | Description        |
+| --------------------------------------------------------------------------- | ------------------ |
 | [ResponseObject](https://docs.onflow.org/fcl/reference/api/#responseobject) | Transaction result |
 
 #### Usage
 
 ```javascript
 import path from "path";
-import {
-  init,
-  emulator,
-  shallPass,
-  sendTransaction,
-  getAccountAddress,
-} from "flow-js-testing";
+import { init, emulator, shallPass, sendTransaction, getAccountAddress } from "flow-js-testing";
 
 // We need to set timeout for a higher number, because some transactions might take up some time
 jest.setTimeout(10000);
@@ -85,14 +79,14 @@ Returns Promise, which contains result, when resolved.
 
 #### Arguments
 
-| Name | Type                        | Description                                          |
-| ---- | --------------------------- | ---------------------------------------------------- |
+| Name | Type                              | Description                                          |
+| ---- | --------------------------------- | ---------------------------------------------------- |
 | `ix` | [Interaction](api.md#interaction) | transaction, either in form of a Promise or function |
 
 #### Returns
 
-| Type                                    | Description        |
-| --------------------------------------- | ------------------ |
+| Type                                                                        | Description        |
+| --------------------------------------------------------------------------- | ------------------ |
 | [ResponseObject](https://docs.onflow.org/fcl/reference/api/#responseobject) | Transaction result |
 
 #### Usage
@@ -156,14 +150,14 @@ Ensure interaction resolves without throwing errors.
 
 #### Arguments
 
-| Name | Type                        | Description                                          |
-| ---- | --------------------------- | ---------------------------------------------------- |
+| Name | Type                              | Description                                          |
+| ---- | --------------------------------- | ---------------------------------------------------- |
 | `ix` | [Interaction](api.md#interaction) | interaction, either in form of a Promise or function |
 
 #### Returns
 
-| Type                                    | Description        |
-| --------------------------------------- | ------------------ |
+| Type                                                                        | Description        |
+| --------------------------------------------------------------------------- | ------------------ |
 | [ResponseObject](https://docs.onflow.org/fcl/reference/api/#responseobject) | Transaction result |
 
 #### Usage

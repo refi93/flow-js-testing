@@ -13,11 +13,11 @@ them here as well.
 
 Returns Cadence template as string with addresses replaced using addressMap
 
-| Name         | Type                           | Optional | Description                                                                                               |
-| ------------ | ------------------------------ | -------- | --------------------------------------------------------------------------------------------------------- |
-| `file`       | string                         |          | relative (to the place from where the script was called) or absolute path to the file containing the code |
+| Name         | Type                              | Optional | Description                                                                                               |
+| ------------ | --------------------------------- | -------- | --------------------------------------------------------------------------------------------------------- |
+| `file`       | string                            |          | relative (to the place from where the script was called) or absolute path to the file containing the code |
 | `addressMap` | [AddressMap](./api.md#addressmap) | ✅       | object to use for address mapping of existing deployed contracts. Default: `{}`                           |
-| `byAddress`  | boolean                        | ✅       | whether addressMap is `{name:address}` or `{address:address}` type. Default: `false`                      |
+| `byAddress`  | boolean                           | ✅       | whether addressMap is `{name:address}` or `{address:address}` type. Default: `false`                      |
 
 #### Returns
 
@@ -48,9 +48,9 @@ Returns Cadence template from file with `name` in `_basepath_/contracts` folder
 
 #### Arguments
 
-| Name         | Type                           | Optional | Description                                                      |
-| ------------ | ------------------------------ | -------- | ---------------------------------------------------------------- |
-| `name`       | string                         |          | name of the contract template                                    |
+| Name         | Type                              | Optional | Description                                                      |
+| ------------ | --------------------------------- | -------- | ---------------------------------------------------------------- |
+| `name`       | string                            |          | name of the contract template                                    |
 | `addressMap` | [AddressMap](./api.md#addressmap) | ✅       | object to use for address mapping of existing deployed contracts |
 
 #### Returns
@@ -94,9 +94,9 @@ Returns Cadence template from file with `name` in `_basepath_/transactions` fold
 
 #### Arguments
 
-| Name         | Type                           | Optional | Description                                                      |
-| ------------ | ------------------------------ | -------- | ---------------------------------------------------------------- |
-| `name`       | string                         |          | name of the transaction template                                 |
+| Name         | Type                              | Optional | Description                                                      |
+| ------------ | --------------------------------- | -------- | ---------------------------------------------------------------- |
+| `name`       | string                            |          | name of the transaction template                                 |
 | `addressMap` | [AddressMap](./api.md#addressmap) | ✅       | object to use for address mapping of existing deployed contracts |
 
 #### Returns
@@ -141,9 +141,9 @@ Returns Cadence template from file with `name` in `_basepath_/scripts` folder
 
 #### Arguments
 
-| Name         | Type                           | Optional | Description                                                      |
-| ------------ | ------------------------------ | -------- | ---------------------------------------------------------------- |
-| `name`       | string                         |          | name of the script template                                      |
+| Name         | Type                              | Optional | Description                                                      |
+| ------------ | --------------------------------- | -------- | ---------------------------------------------------------------- |
+| `name`       | string                            |          | name of the script template                                      |
 | `addressMap` | [AddressMap](./api.md#addressmap) | ✅       | object to use for address mapping of existing deployed contracts |
 
 #### Returns

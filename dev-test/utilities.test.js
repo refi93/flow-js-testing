@@ -59,7 +59,6 @@ describe("block height offset", () => {
     const [offSet] = await getBlockOffset({ addressMap });
 
     expect(offSet).toBe(0);
-
   });
 
   it("should update offset with utility method", async () => {

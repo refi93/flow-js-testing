@@ -1,9 +1,5 @@
 import path from "path";
-import {
-  init,
-  emulator,
-  executeScript,
-} from "../src";
+import { init, emulator, executeScript } from "../src";
 
 (async () => {
   const basePath = path.resolve(__dirname, "./cadence");
@@ -24,7 +20,7 @@ import {
         nickname: "Giorgio",
       },
     ],
-    "name"
+    "name",
   ];
 
   const result = await executeScript({ code, args });

@@ -45,7 +45,7 @@ import { init, emulator, executeScript } from "../src";
 
   // "executeScript" also supports short form, accepting name of the file in "scripts folder
   // and array of arguments
-  const [shortForm] = await executeScript("hello")
+  const [shortForm] = await executeScript("hello");
   console.log({ shortForm });
 
   await emulator.stop();
